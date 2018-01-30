@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -17,9 +17,9 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
 
     </head>
-    <body class="">
+    <body class=>
 
-    <div class="d-flex p-4 flex-column">
+    <div class="cover-container d-flex h-100 p-3 flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
           <h3 class="masthead-brand">EIT</h3>
