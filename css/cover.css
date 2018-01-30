@@ -29,7 +29,9 @@ body {
   height: 100%;
   background-color: rgb(20, 23, 27);
 }
-
+#botaopesquisar{
+  left:800px;
+}
 body {
   display: -ms-flexbox;
   display: -webkit-box;

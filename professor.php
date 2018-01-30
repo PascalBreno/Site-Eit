@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -14,11 +14,12 @@
 
         <!-- Custom styles for this template -->
         <link href="css/cover.css" rel="stylesheet">
-    </head>
-    requere: "config.php";
-    <body class="text-center">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
 
-    <div class="cover-container d-flex h-100 p-3 flex-column">
+    </head>
+    <body class="">
+
+    <div class="d-flex p-4 flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
           <h3 class="masthead-brand">EIT</h3>
@@ -30,9 +31,10 @@
       </header>
       <main >
           <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
+            <div class="">
             </div>
-            <input type="text" placeholder="Faça sua pesquisa aqui" class="form-control btn-outline-light" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" placeholder="Faça sua pesquisa aqui" class="form-control btn-outline-light " aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            <button type="button" class="btn btn-primary"> Pesquisar </button>
           </div>
       </main>
       
