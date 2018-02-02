@@ -11,7 +11,6 @@
 
   <link rel="stylesheet"  href="css/bootstrap.min.css" />
   <link href="css/style.css"  rel="stylesheet">  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
 
@@ -24,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="http://www.ufmt.br/eit/">Site do EIT</a>
@@ -38,21 +37,20 @@
 
 
 <!-- Conteúdo da página em questão, usar para diferenciar entre ambas-->
-      <form "form-inline" action="pesquisa.php">
+      <form action="pesquisa.php">
         <div class="row">
           <div class="col col-md-2"></div>
           <div class=" col col-md-8" >
             <div class="input-group input-group-lg col col-md-10" style="padding:20px 50px 0px 50px;">
               <input type="text" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
               <div class="col col-md-2">
-                <button type="button" class="btn btn-xs btn-primary botao "><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Pesquisar </button>
+                <button type="submit" class="btn btn-primary botao "><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Pesquisar </button>
               </div>
             </div>
           </div>  
           <div class="col col-md-2"> </div>    
         </div>
       </form>
-
 
 
     </body>
