@@ -11,9 +11,10 @@
 
   <link rel="stylesheet"  href="css/bootstrap.min.css" />
   <link href="css/style.css"  rel="stylesheet">  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
+<!-- Conexão -->
+<?php include "config.php";?>
 
 <!-- Menu, não mudar entre as novas abas -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light " >
