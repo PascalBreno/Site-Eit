@@ -13,10 +13,14 @@
   <link href="css/style.css"  rel="stylesheet">  
     </head>
     <body>
-<!-- Conexão -->
-<?php include "config.php";?>
+
+  <?php
+    session_start();
+  ?>
 
 <!-- Menu, não mudar entre as novas abas -->
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light " >
     <a class="navbar-brand" href="#">EIT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,14 +43,16 @@
 
 
 <!-- Conteúdo da página em questão, usar para diferenciar entre ambas-->
-      <form "form-inline" action="pesquisa.php">
+
+
+      <form "form-inline"  action = "pesquisa.php" id="pesquisa_submit" name ="signup" method="post">
         <div class="row">
           <div class="col col-md-2"></div>
           <div class=" col col-md-8" >
             <div class="input-group input-group-lg col col-md-10" style="padding:20px 50px 0px 50px;">
-              <input type="text" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+              <input type="text" name = "pesquisar_input" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
               <div class="col col-md-2">
-                <button type="button" class="btn btn-xs btn-primary botao "><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Pesquisar </button>
+                <input type="submit" value="Pesquisar" name="submite" class="btn btn-xs btn-primary botao "></input>
               </div>
             </div>
           </div>  
@@ -54,6 +60,14 @@
         </div>
       </form>
 
+<!-- Conexão -->
+<?php 
+  include "config.php";
+  if(isset($_POST['submit'])) {
+    $pesquisa = $_POST['pesquisar_input'];
+    $_SESSION['pesquisa_input'] = $pesquisa;
+  }  
+?>
 
 
     </body>

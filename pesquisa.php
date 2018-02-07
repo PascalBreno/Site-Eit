@@ -65,20 +65,22 @@
       <th scope="col">Jornada</th>
       <th scope="col">Formação</th>
     </tr>
-<?php include "config.php";
-        $sql=("SELECT *from professor ORDER BY nome ");
-        $res = mysqli_query($conn, $sql);
-        while ($registro = mysqli_fetch_row($res)) {
-            $variavel1 = $registro[1];
-            $variavel2 = $registro[2];  
-            $variavel3 = $registro[3];
-            $variavel4 = $registro[4];
-            echo'<tr><td href = www.google.com>'.$variavel1.'</td>';
-            echo'<td>'.$variavel2.'</td>';
-            echo'<td>'.$variavel3.'</td>';
-            echo'<td>'.$variavel4.'</td></tr>';
-
-        }
+<?php 
+  session_start();
+  include "config.php";
+  $pesquisar_input = $_SESSION['pesquisa_input'];
+  $sql=("SELECT * from professor  where like '%pesquisar_input%'' ORDER BY nome ");
+  $res = mysqli_query($conn, $sql);
+  while ($registro = mysqli_fetch_row($res)) {
+    $variavel1 = $registro[1];
+    $variavel2 = $registro[2];  
+    $variavel3 = $registro[3];     
+    $variavel4 = $registro[4];
+    echo'<tr><td>'.$variavel1.'</td>';
+    echo'<td>'.$variavel2.'</td>';
+    echo'<td>'.$variavel3.'</td>';
+    echo'<td>'.$variavel4.'</td></tr>';
+    }
 
 ?>
 </table>
