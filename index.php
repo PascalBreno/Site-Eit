@@ -14,10 +14,11 @@
     </head>
     <body>
 
-  <?php
-    session_start();
-  ?>
 
+  <?php 
+    session_start();
+    include "config.php";  
+?>
 <!-- Menu, não mudar entre as novas abas -->
 
 
@@ -49,10 +50,10 @@
         <div class="row">
           <div class="col col-md-2"></div>
           <div class=" col col-md-8" >
-            <div class="input-group input-group-lg col col-md-10" style="padding:20px 50px 0px 50px;">
+            <div class="input-group input-group-lg col col-md-11" style="padding:20px 50px 0px 50px;">
               <input type="text" name = "pesquisar_input" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-              <div class="col col-md-2">
-                <input type="submit" value="Pesquisar" name="submite" class="btn btn-xs btn-primary botao "></input>
+              <div class="col col-md-1">
+                <input type="submit" value="Pesquisar" name="submit" class="btn btn-xs btn-primary botao " style="width:100px"></input>
               </div>
             </div>
           </div>  
@@ -61,13 +62,7 @@
       </form>
 
 <!-- Conexão -->
-<?php 
-  include "config.php";
-  if(isset($_POST['submit'])) {
-    $pesquisa = $_POST['pesquisar_input'];
-    $_SESSION['pesquisa_input'] = $pesquisa;
-  }  
-?>
+
 
 
     </body>

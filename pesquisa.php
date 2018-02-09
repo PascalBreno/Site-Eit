@@ -45,9 +45,9 @@
         <div class="row">
           <div class="col col-md-2"></div>
           <div class=" col col-md-8" >
-            <div class="input-group input-group-lg col col-md-10" style="padding:20px 50px 0px 50px;">
+            <div class="input-group input-group-lg col col-md-11" style="padding:20px 50px 0px 50px;">
               <input type="text" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-              <div class="col col-md-2">
+              <div class="col col-md-1">
                 <button type="button" class="btn btn-xs btn-primary botao "><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Pesquisar </button>
               </div>
             </div>
@@ -55,34 +55,44 @@
           <div class="col col-md-2"> </div>    
         </div>
       </form>
+      <br/> 
       <br/>
       <br/>
-      <br/>
-<table class="table">
-<tr>
+<div class ="row">
+<div class="col col-md-2"></div>
+  <div class ="col col-md-8">
+    <table class="table">
+    <tr>
       <th scope="col">Nome</th>
       <th scope="col">Sexo</th>
       <th scope="col">Jornada</th>
       <th scope="col">Formação</th>
     </tr>
-<?php 
-  session_start();
-  include "config.php";
-  $pesquisar_input = $_SESSION['pesquisa_input'];
-  $sql=("SELECT * from professor  where like '%pesquisar_input%'' ORDER BY nome ");
-  $res = mysqli_query($conn, $sql);
-  while ($registro = mysqli_fetch_row($res)) {
-    $variavel1 = $registro[1];
-    $variavel2 = $registro[2];  
-    $variavel3 = $registro[3];     
-    $variavel4 = $registro[4];
-    echo'<tr><td>'.$variavel1.'</td>';
-    echo'<td>'.$variavel2.'</td>';
-    echo'<td>'.$variavel3.'</td>';
-    echo'<td>'.$variavel4.'</td></tr>';
-    }
+    <?php 
+      session_start();
+      include "config.php";
+      if(isset($_POST['submit'])) {
+        $pesquisa = $_POST['pesquisar_input'];
+        $_SESSION['pesquisar_input'] = $pesquisa;
+      }
+      $pesquisar = $_SESSION['pesquisar_input'];
+      $sql=("SELECT * from professor  where nome like  '".$pesquisar."%'  ORDER BY nome collate utf8_general_ci ");
+      $res = mysqli_query($conn, $sql);
+      while ($registro = mysqli_fetch_row($res)) {
+        $variavel1 = $registro[1];
+        $variavel2 = $registro[2];  
+        $variavel3 = $registro[3];     
+        $variavel4 = $registro[4];
+        echo'<tr><td>'.$variavel1.'</td>';
+        echo'<td>'.$variavel2.'</td>';
+        echo'<td>'.$variavel3.'</td>';
+        echo'<td>'.$variavel4.'</td></tr>';
+       }
+    ?>
+    </table>
+    </div>
+    <div class="col col-md-2"></div>
+</div>
 
-?>
-</table>
     </body>
 </html>

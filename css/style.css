@@ -4,4 +4,6 @@
 
 .botao{
     width: 100px;
+    border-top: 10px;
+    color : #000;
 }
