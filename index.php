@@ -43,9 +43,15 @@
   </nav>
 
 
+<<<<<<< HEAD
 <!--Aba de pesquisa, só retirar se necessário!!!-->
 
 <!--
+=======
+<!-- Conteúdo da página em questão, usar para diferenciar entre ambas-->
+
+
+>>>>>>> master
       <form "form-inline"  action = "pesquisa.php" id="pesquisa_submit" name ="signup" method="post">
         <div class="row">
           <div class="col col-md-2"></div>
@@ -91,6 +97,8 @@
     </div>
     </main>
     </body>
+
+<!-- Conexão -->
 
 
 
