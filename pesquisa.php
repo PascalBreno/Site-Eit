@@ -8,18 +8,18 @@
  
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
- 
-  <link rel="stylesheet"  href="css/bootstrap.min.css"/>
+ <!-- Importar arquivos AQUI -->
   <link href="css/style.css"  rel="stylesheet"/> 
-  <link rel= "stylesheet" href="css/bootstrap4.css"/>
-  <link rel= "stylesheet" href="css/bootstrap4.min.css"/>
-  <script type="text/javascript" src="js/jquery.datatables.bootstrap4.js"> </script>
-  <script type="text/javascript" src="js/jquery.js"> </script>
-  <script type="text/javascript" src="js/jquery.datatables.min.js"> </script>
-  <script type="text/javascript" src="js/bootstrap.min.js"> </script>
-
+  <link rel= "stylesheet" href="css/bootstrap.css"/>
+  <link rel= "stylesheet" href="css/dataTables.bootstrap4.css"/>
+  <script type="text/javascript" src="js/jquery-3.2.1.js"> </script>
+  <script type="text/javascript" src="js/bootstrap.js"> </script>
+  <script type="text/javascript" src="js/jquery.dataTables.js"> </script>
+  <script type="text/javascript" src="js/dataTables.bootstrap4.js"> </script>
+  
     </head>
     <body>
+    <div class = "container-fluid">
 <!-- Menu, não mudar entre as novas abas -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light " >
     <a class="navbar-brand" href="#">EIT</a>
@@ -63,22 +63,21 @@
       <br/> 
       <br/>
       <br/>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#tabela1').DataTable();
-} );
-</script>
+
 
 <div class ="row">
 <div class="col col-md-2"></div>
   <div class ="col col-md-8">
     <table class="table" id="tabela1">
+    <thead>
     <tr>
       <th scope="col">Nome</th>
       <th scope="col">Sexo</th>
       <th scope="col">Jornada</th>
       <th scope="col">Formação</th>
     </tr>
+    </thead>
+    <tbody>
     <?php 
       session_start();
       include "config.php";
@@ -100,10 +99,45 @@ $(document).ready(function() {
         echo'<td>'.$variavel4.'</td></tr>';
        }
     ?>
+    </tbody>
     </table>
     </div>
     <div class="col col-md-2"></div>
 </div>
- 
+    </div>
+
+
+<!-- Parte executada pelo chato do cleyton -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('#tabela1').DataTable({
+            "language": {
+              "sEmptyTable": "Nenhum registro encontrado",
+              "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+              "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+              "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+              "sInfoPostFix": "",
+              "sInfoThousands": ".",
+              "sLengthMenu": "_MENU_ resultados por página",
+              "sLoadingRecords": "Carregando...",
+              "sProcessing": "Processando...",
+              "sZeroRecords": "Nenhum registro encontrado",
+              "sSearch": "Pesquisar",
+              "oPaginate": {
+                  "sNext": "Próximo",
+                  "sPrevious": "Anterior",
+                  "sFirst": "Primeiro",
+                  "sLast": "Último"
+              },
+              "oAria": {
+                  "sSortAscending": ": Ordenar colunas de forma ascendente",
+                  "sSortDescending": ": Ordenar colunas de forma descendente"
+              }
+          }
+        });
+   } );
+  </script>
+
+
     </body>
 </html>
