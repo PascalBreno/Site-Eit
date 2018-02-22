@@ -15,11 +15,13 @@
   <script type="text/javascript" src="js/jquery-3.2.1.js"> </script>
   <script type="text/javascript" src="js/bootstrap.js"> </script>
   <script type="text/javascript" src="js/jquery.dataTables.js"> </script>
-  <script type="text/javascript" src="js/dataTables.bootstrap4.js"> </script>
-  
-    </head>
+  <script type="text/javascript" src="js/dataTables.bootstrap4.js"> </script>  
+</head>
     <body>
+
     <div class = "container-fluid">
+
+
 <!-- Menu, não mudar entre as novas abas -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light " >
     <a class="navbar-brand" href="#">EIT</a>
@@ -29,10 +31,10 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://www.ufmt.br/eit/">Site do EIT</a>
+          <a class="nav-link" target="_blank" href="http://www.ufmt.br/eit/">Site do EIT</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="#">Contato</a>
@@ -72,9 +74,11 @@
     <thead>
     <tr>
       <th scope="col">Nome</th>
-      <th scope="col">Sexo</th>
       <th scope="col">Jornada</th>
       <th scope="col">Formação</th>
+      <th scope="col">Lotação</th>
+      <th scope="col">Local de Exercicio</th>
+      <th scope="col">campus</th>
     </tr>
     </thead>
     <tbody>
@@ -89,14 +93,18 @@
       $sql=("SELECT * from professor  where nome like  '".$pesquisar."%'  ORDER BY nome collate utf8_general_ci ");
       $res = mysqli_query($conn, $sql);
       while ($registro = mysqli_fetch_row($res)) {
-        $variavel1 = $registro[1];
-        $variavel2 = $registro[2];  
+        $variavel1 = $registro[1]; 
         $variavel3 = $registro[3];     
         $variavel4 = $registro[4];
+        $variavel5 = $registro[5];  
+        $variavel6 = $registro[6];     
+        $variavel7 = $registro[7];
         echo'<tr><td>'.$variavel1.'</td>';
-        echo'<td>'.$variavel2.'</td>';
         echo'<td>'.$variavel3.'</td>';
-        echo'<td>'.$variavel4.'</td></tr>';
+        echo'<td>'.$variavel4.'</td>';
+        echo'<td>'.$variavel5.'</td>';
+        echo'<td>'.$variavel6.'</td>';
+        echo'<td>'.$variavel7.'</td></tr>';
        }
     ?>
     </tbody>
@@ -104,13 +112,14 @@
     </div>
     <div class="col col-md-2"></div>
 </div>
-    </div>
 
 
-<!-- Parte executada pelo chato do cleyton -->
+
+<!-- Parte executada pelo javascript-->
     <script type="text/javascript">
     $(document).ready(function() {
-      $('#tabela1').DataTable({
+      $('#tabela1').DataTable(
+              {
             "language": {
               "sEmptyTable": "Nenhum registro encontrado",
               "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -133,11 +142,26 @@
                   "sSortAscending": ": Ordenar colunas de forma ascendente",
                   "sSortDescending": ": Ordenar colunas de forma descendente"
               }
-          }
+          },
+          "bFilter":false,
+          "pageLength": 5,
         });
    } );
   </script>
-
-
-    </body>
+    
+    <footer class="mainfooter" style="bottom:0px;"role="contentinfo">
+      <div >
+    <div class="footer-bottom">
+      <div class="container">  
+          <center>
+            <p class="text-xs-center"><a target="_blank" href="https://www.facebook.com/eitufmt/"> @Facebook</a> <a target="_blank" href="https://www.instagram.com/eitufmt"> @instagram </a></p>
+            <p class="text-xs-center" >&copy; Copyright 2018 - UFMT - Todos os direitos reservados.</p>
+          </center>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  
+  </body>
 </html>
