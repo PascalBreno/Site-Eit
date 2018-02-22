@@ -78,7 +78,7 @@
       <th scope="col">Formação</th>
       <th scope="col">Lotação</th>
       <th scope="col">Local de Exercicio</th>
-      <th scope="col">campus</th>
+      <th scope="col">Campus</th>
     </tr>
     </thead>
     <tbody>
@@ -109,6 +109,7 @@
     ?>
     </tbody>
     </table>
+    <p class="noticiadeDE">*DE = Dedicação Exclussiva </p>
     </div>
     <div class="col col-md-2"></div>
 </div>
