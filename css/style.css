@@ -43,3 +43,23 @@ footer {
   color:black;
 
 }
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.facebook{
+  max-width:70px;
+  max-height:70px;
+}
+.instagram{
+  max-width:35px;
+  max-height:35px;
+}
+.tabelaPesquisa{
+  margin-top: 10px;
+  margin-bottom:50px;
+}

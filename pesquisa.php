@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
  
-  <title>escritório de inovação e tecnologia</title>
+  <title>Escritório de inovação e tecnologia</title>
  
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
@@ -46,9 +46,10 @@
  
  
  
-<!-- Conteúdo da página em questão, usar para diferenciar entre ambas-->
-  <!-- Conexão -->
-  <form "form-inline"  action = "pesquisa.php" id="pesquisa_submit" name ="signup" method="post">
+
+
+<!-- Barra de Pesquisa-->
+  <form "form-inline" class="tabelaPesquisa" action = "pesquisa.php" id="pesquisa_submit" name ="signup" method="post">
   <div class="row">
     <div class="col col-md-2"></div>
     <div class=" col col-md-8" >
@@ -61,11 +62,20 @@
     </div>  
     <div class="col col-md-2"> </div>    
   </div>
+  <!--Botão de seleção de pesquisa-->
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-primary active">
+      <input type="radio" name="options" id="option1" autocomplete="off" checked> Nome
+    </label>
+    <label class="btn btn-primary">
+      <input type="radio" name="options" id="option2" autocomplete="off"> Departamento
+    </label>
+    <label class="btn btn-primary">
+     <input type="radio" name="options" id="option3" autocomplete="off"> Campus
+    </label>
+  </div>
   </form>   
-      <br/> 
-      <br/>
-      <br/>
-
+<!-- -->
 
 <div class ="row">
 <div class="col col-md-2"></div>
@@ -87,10 +97,11 @@
       include "config.php";
       if(isset($_POST['submit'])) {
         $pesquisa = $_POST['pesquisar_input'];
+        $pesquisapor=$_POST['options'];
         $_SESSION['pesquisar_input'] = $pesquisa;
       }
       $pesquisar = $_SESSION['pesquisar_input'];
-      $sql=("SELECT * from professor  where nome like  '".$pesquisar."%'  ORDER BY nome collate utf8_general_ci ");
+      $sql=("SELECT * from professor  where '".$pesquisapor."' like  '".$pesquisar."%'  ORDER BY nome collate utf8_general_ci ");
       $res = mysqli_query($conn, $sql);
       while ($registro = mysqli_fetch_row($res)) {
         $variavel1 = $registro[1]; 
@@ -155,8 +166,9 @@
     <div class="footer-bottom">
       <div class="container">  
           <center>
-            <p class="text-xs-center"><a target="_blank" href="https://www.facebook.com/eitufmt/"> @Facebook</a> <a target="_blank" href="https://www.instagram.com/eitufmt"> @instagram </a></p>
-            <p class="text-xs-center" >&copy; Copyright 2018 - UFMT - Todos os direitos reservados.</p>
+            <a target="_blank" href="https://www.facebook.com/eitufmt/"><img class="facebook" src="img/icons/Facebook.png"></a> 
+            <a target="_blank" href="https://www.instagram.com/eitufmt"><img class="instagram"  src="img/icons/Instagram.png"></a>
+            <p> Copyright 2018 - UFMT - Todos os direitos reservados.</p>
           </center>
         </div>
       </div>
