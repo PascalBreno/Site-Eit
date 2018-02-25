@@ -26,6 +26,7 @@
 ?>
 <!-- Menu, não mudar entre as novas abas -->
  
+<div class = "container-fluid">
  
 <nav class="navbar navbar-expand-lg navbar-light bg-light " >
 <a class="navbar-brand" href="#">EIT</a>
@@ -49,21 +50,6 @@
 
 
   <!--Parte da Pesquisa-->
-  <div class="container-fluid">
-  <form "form-inline"  action = "pesquisa.php" id="pesquisa_submit" name ="signup" method="post">
-        <div class="row">
-          <div class="col col-md-2"></div>
-          <div class=" col col-md-8" >
-            <div class="input-group input-group-lg col col-md-11" style="padding:20px 50px 0px 50px;">
-              <input type="text" name = "pesquisar_input" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-              <div class="col col-md-1">
-                <input type="submit" value="Pesquisar" name="submit" class="btn btn-xs btn-primary botao " style="width:100px"></input>
-              </div>
-            </div>
-          </div>  
-          <div class="col col-md-2"> </div>    
-        </div>
-      </form>
 
       
       <!-- Conteudo do menhu inicial-->
@@ -73,13 +59,13 @@
       <div class = "col col-md-3"></div>
         <div class="col col-md6" >
           <center>
-            <h1 class="cover-heading">Escritório de Inovação e Tecnologia</h1>
+            <h1 class="cover-heading fontLinux">Escritório de Inovação e Tecnologia</h1>
           </center>
           <div class="col col-md-3"></div>
           <div class ="col col-md6">
             <br></br>
             <center>
-              <p class="lead"> O Escritório de Inovação Tecnológica (EIT) é o Núcleo de Inovação Tecnológica da Universidade Federal de Mato Grosso, criado pela Resolução CD nº 18/2007 e atualizado por meio da Resolução CD nº 17/2016 em consonância com o Novo Marco Legal da Inovação conforme disposto na Lei nº 13.243/2016... ​</p>
+              <p class="lead "> O Escritório de Inovação Tecnológica (EIT) é o Núcleo de Inovação Tecnológica da Universidade Federal de Mato Grosso, criado pela Resolução CD nº 18/2007 e atualizado por meio da Resolução CD nº 17/2016 em consonância com o Novo Marco Legal da Inovação conforme disposto na Lei nº 13.243/2016... ​</p>
             </center>
           </div> 
           <br></br>
@@ -114,6 +100,6 @@
       </div>
     </div>
   </footer>
-
+    </div>
     </div>
     </html>

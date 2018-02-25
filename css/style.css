@@ -63,3 +63,35 @@ footer {
   margin-top: 10px;
   margin-bottom:50px;
 }
+.radios{
+  margin-top:14px;
+  position: relative;
+  margin-left: 55%;
+}
+.radio1{
+  margin-left:10px;
+  font-family:'Linux Libertine';
+}
+.fontbebas{
+  font-family:'Bebas Neue';
+}
+.fontLinux{
+  font-family:'Linux Libertine';
+}
+.posicaomenu{
+  margin-top: 10px;
+
+}
+
+.pesquisapor{
+  font-size:20px;
+  position: relative;
+}
+.opcaodepesquisa{
+  margin-left:60%;
+  margin-top:2%;
+  margin-bottom:2%;
+}
+.opcaodepesquisa2{
+  margin-left:60%;
+}

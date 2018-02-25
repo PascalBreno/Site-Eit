@@ -23,38 +23,33 @@
 
 
 <!-- Menu, não mudar entre as novas abas -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
-    <a class="navbar-brand" href="#">EIT</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light posicaomenu" >
+    <a class="navbar-brand font fontbebas" href="#">EIT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>    
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link fontbebas" href="index.php">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="http://www.ufmt.br/eit/">Site do EIT</a>
+          <a class="nav-link fontbebas" target="_blank" href="http://www.ufmt.br/eit/">Site do EIT</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">Contato</a>
+        <a class="nav-link fontbebas" href="#">Contato</a>
         </li>
       </ul>
     </div>
   </nav>
- 
- 
- 
- 
-
-
+   
 <!-- Barra de Pesquisa-->
   <form "form-inline" class="tabelaPesquisa" action = "pesquisa.php" id="pesquisa_submit" name ="signup" method="post">
   <div class="row">
     <div class="col col-md-2"></div>
     <div class=" col col-md-8" >
       <div class="input-group input-group-lg col col-md-11" style="padding:20px 50px 0px 50px;">
-        <input type="text" name = "pesquisar_input" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        <input type="text " required name = "pesquisar_input" class="form-control" placeholder="Faça sua pesquisa aqui" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
         <div class="col col-md-1">
           <input type="submit" value="Pesquisar" name="submit" class="btn btn-xs btn-primary botao " style="width:100px"></input>
         </div>
@@ -63,17 +58,30 @@
     <div class="col col-md-2"> </div>    
   </div>
   <!--Botão de seleção de pesquisa-->
-  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-primary active">
-      <input type="radio" name="options" id="option1" autocomplete="off" checked> Nome
-    </label>
-    <label class="btn btn-primary">
-      <input type="radio" name="options" id="option2" autocomplete="off"> Departamento
-    </label>
-    <label class="btn btn-primary">
-     <input type="radio" name="options" id="option3" autocomplete="off"> Campus
-    </label>
-  </div>
+  <div class="row">
+    <div class="col col-md-2"></div>
+    <div class=" col col-md-8" >
+      <!-- Aqui ficam as opções de pesquisa-->
+        <div class="opcaodepesquisa">
+          <a class="fontLinux pesquisapor">Pesquisa por:</a>
+          <div type="radios">  
+            <label class="radio-inline radio1"><input type="radio" required value="nome" name="optradio">Nome  </label>
+            <label class="radio-inline radio1"><input type="radio" value = "Lotacao" name="optradio">Departamento  </label>
+          </div>
+        </div>
+        <!--Aqui ficam as opções de busca de campus-->
+        <div class="opcaodepesquisa2">
+          <select required class="custom-select" id="inputGroupSelect01">
+            <option selected value="">Selecione o Campus</option>
+            <option value="cuiaba">Cuiabá</option>
+            <option value="Barra do Garças">Barra do Garças</option>
+            <option value="Rondopolis">Rondonopolis</option>
+          </select>
+        </div>
+      </div>
+   </div>
+      </div>
+    <div class="col col-md-2"> </div>    
   </form>   
 <!-- -->
 
@@ -97,11 +105,14 @@
       include "config.php";
       if(isset($_POST['submit'])) {
         $pesquisa = $_POST['pesquisar_input'];
-        $pesquisapor=$_POST['options'];
+        $pesquisapor=$_POST['optradio'];
         $_SESSION['pesquisar_input'] = $pesquisa;
-      }
+        if($pesquisa==NULL){
+          $oesquisa=' ';
+          $pesquisapor='nome';
+        }   
       $pesquisar = $_SESSION['pesquisar_input'];
-      $sql=("SELECT * from professor  where '".$pesquisapor."' like  '".$pesquisar."%'  ORDER BY nome collate utf8_general_ci ");
+      $sql=("SELECT * from professor  where ".$pesquisapor." like '".$pesquisar."%' ORDER BY nome");
       $res = mysqli_query($conn, $sql);
       while ($registro = mysqli_fetch_row($res)) {
         $variavel1 = $registro[1]; 
@@ -117,6 +128,7 @@
         echo'<td>'.$variavel6.'</td>';
         echo'<td>'.$variavel7.'</td></tr>';
        }
+      }
     ?>
     </tbody>
     </table>
