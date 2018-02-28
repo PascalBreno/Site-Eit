@@ -1,4 +1,9 @@
+<?php 
+      session_start();
+      include "config.php";
+?>
 <!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="utf-8" />
@@ -67,17 +72,15 @@
           <div type="radios">  
             <label class="radio-inline radio1"><input type="radio" required value="nome" name="optradio">Nome  </label>
             <label class="radio-inline radio1"><input type="radio" value = "Lotacao" name="optradio">Departamento  </label>
+            <select required class="custom-select" id="inputGroupSelect01">
+              <option selected value="">Selecione o Campus</option>
+              <option value="cuiaba">Cuiabá</option>
+              <option value="Barra do Garças">Barra do Garças</option>
+              <option value="Rondopolis">Rondonopolis</option>
+          </select>
           </div>
         </div>
         <!--Aqui ficam as opções de busca de campus-->
-        <div class="opcaodepesquisa2">
-          <select required class="custom-select" id="inputGroupSelect01">
-            <option selected value="">Selecione o Campus</option>
-            <option value="cuiaba">Cuiabá</option>
-            <option value="Barra do Garças">Barra do Garças</option>
-            <option value="Rondopolis">Rondonopolis</option>
-          </select>
-        </div>
       </div>
    </div>
       </div>
@@ -101,14 +104,12 @@
     </thead>
     <tbody>
     <?php 
-      session_start();
-      include "config.php";
       if(isset($_POST['submit'])) {
         $pesquisa = $_POST['pesquisar_input'];
         $pesquisapor=$_POST['optradio'];
         $_SESSION['pesquisar_input'] = $pesquisa;
         if($pesquisa==NULL){
-          $oesquisa=' ';
+          $pesquisa=' ';
           $pesquisapor='nome';
         }   
       $pesquisar = $_SESSION['pesquisar_input'];
@@ -132,7 +133,7 @@
     ?>
     </tbody>
     </table>
-    <p class="noticiadeDE">*DE = Dedicação Exclussiva </p>
+    <p class="noticiadeDE">*DE = Dedicação Exclusiva </p>
     </div>
     <div class="col col-md-2"></div>
 </div>
