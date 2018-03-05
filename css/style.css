@@ -75,8 +75,8 @@ footer {
 .fontbebas{
   font-family:'Bebas Neue';
 }
-.fontLinux{
-  font-family:'Linux Libertine';
+.fontRoboto{
+  font-family:'Roboto';
 }
 .posicaomenu{
   margin-top: 10px;
@@ -84,13 +84,11 @@ footer {
 }
 
 .pesquisapor{
-  font-size:20px;
   position: relative;
 }
 .opcaodepesquisa{
-  margin-left:60%;
-  margin-top:2%;
-  margin-bottom:2%;
+  margin-left:5%;
+  margin-top:5px;
 }
 .opcaodepesquisa2{
   margin-left:60%;

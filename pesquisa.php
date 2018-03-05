@@ -29,20 +29,20 @@
 
 <!-- Menu, não mudar entre as novas abas -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light posicaomenu" >
-    <a class="navbar-brand font fontbebas" href="#">EIT</a>
+    <a class="navbar-brand font fontRoboto" href="#">EIT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>    
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav">   
         <li class="nav-item active">
-          <a class="nav-link fontbebas" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link fontRoboto" href="index.php">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fontbebas" target="_blank" href="http://www.ufmt.br/eit/">Site do EIT</a>
+          <a class="nav-link fontRoboto" target="_blank" href="http://www.ufmt.br/eit/">Site do EIT</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link fontbebas" href="#">Contato</a>
+        <a class="nav-link fontRoboto" href="#">Contato</a>
         </li>
       </ul>
     </div>
@@ -68,15 +68,15 @@
     <div class=" col col-md-8" >
       <!-- Aqui ficam as opções de pesquisa-->
         <div class="opcaodepesquisa">
-          <a class="fontLinux pesquisapor">Pesquisa por:</a>
+          <a class="fontRoboto pesquisapor">Pesquisa por:</a>
           <div type="radios">  
-            <label class="radio-inline radio1"><input type="radio" required value="nome" name="optradio">Nome  </label>
-            <label class="radio-inline radio1"><input type="radio" value = "Lotacao" name="optradio">Departamento  </label>
+            <label class="radio-inline fontRoboto radio1"><input type="radio" required value="nome" name="optradio">Nome  </label>
+            <label class="radio-inline fontRoboto radio1"><input type="radio" value = "Lotacao" name="optradio">Departamento  </label>
             <select required class="custom-select" id="inputGroupSelect01">
-              <option selected value="">Selecione o Campus</option>
-              <option value="cuiaba">Cuiabá</option>
-              <option value="Barra do Garças">Barra do Garças</option>
-              <option value="Rondopolis">Rondonopolis</option>
+              <option selected class ="fontRoboto" value="">Selecione o Campus</option>
+              <option class="fontRoboto" value="cuiaba">Cuiabá</option>
+              <option class="fontRoboto" value="Barra do Garças">Barra do Garças</option>
+              <option class="fontRoboto" value="Rondopolis">Rondonopolis</option>
           </select>
           </div>
         </div>
@@ -107,6 +107,8 @@
       if(isset($_POST['submit'])) {
         $pesquisa = $_POST['pesquisar_input'];
         $pesquisapor=$_POST['optradio'];
+        $campus=$_POST['inputGroupSelect01'];
+        echo $campus;
         $_SESSION['pesquisar_input'] = $pesquisa;
         if($pesquisa==NULL){
           $pesquisa=' ';
