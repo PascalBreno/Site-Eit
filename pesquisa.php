@@ -72,7 +72,7 @@
           <div type="radios">  
             <label class="radio-inline fontRoboto radio1"><input type="radio" required value="nome" name="optradio">Nome  </label>
             <label class="radio-inline fontRoboto radio1"><input type="radio" value = "Lotacao" name="optradio">Departamento  </label>
-            <select required class="custom-select" id="inputGroupSelect01">
+            <select required class="custom-select" name="campus">
               <option selected class ="fontRoboto" value="">Selecione o Campus</option>
               <option class="fontRoboto" value="cuiaba">Cuiabá</option>
               <option class="fontRoboto" value="Barra do Garças">Barra do Garças</option>
@@ -107,15 +107,14 @@
       if(isset($_POST['submit'])) {
         $pesquisa = $_POST['pesquisar_input'];
         $pesquisapor=$_POST['optradio'];
-        $campus=$_POST['inputGroupSelect01'];
-        echo $campus;
+        $campus=$_POST['campus'];
         $_SESSION['pesquisar_input'] = $pesquisa;
         if($pesquisa==NULL){
           $pesquisa=' ';
           $pesquisapor='nome';
         }   
       $pesquisar = $_SESSION['pesquisar_input'];
-      $sql=("SELECT * from professor  where ".$pesquisapor." like '".$pesquisar."%' ORDER BY nome");
+      $sql=("SELECT * from professor  where ".$pesquisapor." like '".$pesquisar."%' and Campus like '$campus' ORDER BY nome");
       $res = mysqli_query($conn, $sql);
       while ($registro = mysqli_fetch_row($res)) {
         $variavel1 = $registro[1]; 
