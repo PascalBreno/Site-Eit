@@ -74,6 +74,7 @@
             <label class="radio-inline fontRoboto radio1"><input type="radio" value = "Lotacao" name="optradio">Departamento  </label>
             <select required class="custom-select" name="campus">
               <option selected class ="fontRoboto" value="">Selecione o Campus</option>
+              <option class="fontRoboto" value="*">Todos os Campus</option>
               <option class="fontRoboto" value="cuiaba">Cuiabá</option>
               <option class="fontRoboto" value="Barra do Garças">Barra do Garças</option>
               <option class="fontRoboto" value="Rondopolis">Rondonopolis</option>
@@ -114,7 +115,11 @@
           $pesquisapor='nome';
         }   
       $pesquisar = $_SESSION['pesquisar_input'];
-      $sql=("SELECT * from professor  where ".$pesquisapor." like '".$pesquisar."%' and Campus like '$campus' ORDER BY nome");
+      if($campus!='*'){
+        $sql=("SELECT * from professor  where ".$pesquisapor." like '".$pesquisar."%' and Campus like '$campus' ORDER BY nome");
+      }else{
+        $sql=("SELECT * from professor  where ".$pesquisapor." like '".$pesquisar."%' ORDER BY nome");
+      }
       $res = mysqli_query($conn, $sql);
       while ($registro = mysqli_fetch_row($res)) {
         $variavel1 = $registro[1]; 
@@ -170,7 +175,7 @@
               }
           },
           "bFilter":false,
-          "pageLength": 5,
+          "pageLength": 10,
         });
    } );
   </script>
@@ -180,9 +185,8 @@
     <div class="footer-bottom">
       <div class="container">  
           <center>
-            <a target="_blank" href="https://www.facebook.com/eitufmt/"><img class="facebook" src="img/icons/Facebook.png"></a> 
-            <a target="_blank" href="https://www.instagram.com/eitufmt"><img class="instagram"  src="img/icons/Instagram.png"></a>
-            <p> Copyright 2018 - UFMT - Todos os direitos reservados.</p>
+          <p class="text-xs-center"><a target="_blank" href="https://www.facebook.com/eitufmt/"> @Facebook</a> <a target="_blank" href="https://www.instagram.com/eitufmt"> @instagram </a></p>
+          <p> Copyright 2018 - UFMT - Todos os direitos reservados.</p>
           </center>
         </div>
       </div>
