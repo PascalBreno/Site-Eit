@@ -16,8 +16,8 @@
 <script type="text/javascript" src="js/bootstrap.js"> </script>
 <script type="text/javascript" src="js/jquery.dataTables.js"> </script>
 <script type="text/javascript" src="js/dataTables.bootstrap4.js"> </script>  
-    </head>
-    <body>
+</head>
+<body>
  
  
   <?php 
@@ -48,31 +48,69 @@
 </div>      
 </nav>
 
+<!-- TÍTULO -->
+<center>
+  <h1 class ="titulolab">
+    Título do Laboratório
+  </h1>
+</center>
+<!--  Fim  -->
 
 
 
 
 
-
-
-
-
-
-
-
-
-    <footer class="mainfooter" style="bottom:0px;"role="contentinfo">
-      <div >
-    <div class="footer-bottom">
-      <div class="container">  
-          <center>
-            <p class="text-xs-center"><a target="_blank" href="https://www.facebook.com/eitufmt/"> @Facebook</a> <a target="_blank" href="https://www.instagram.com/eitufmt"> @instagram </a></p>
-            <p class="text-xs-center" >&copy; Copyright 2018 - UFMT - Todos os direitos reservados.</p>
-          </center>
+<!-- Slides -->
+<div class="row">
+    <div class="col col-md-7">
+    <div id="carouselExampleControls" class="carousel slide slidepersonalizado" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img class="d-block img-fluid" src="img/TestePhP/01.png" height="100%" width="100%" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block img-fluid" src="img/TestePhP/02.png" height="100%" width="100%" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block img-fluid" src="img/TestePhP/03.png" height="100%" width="100%" alt="Third slide">
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-  </footer>
     </div>
+    <div class="col col-md-5">
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus diam a odio mollis laoreet. Ut quis facilisis augue. 
+      Vestibulum erat nisl, pulvinar id varius quis, scelerisque ut magna. Aliquam non odio iaculis enim fermentum convallis sed non tellus.
+       Aliquam eget maximus mauris. Nam a nisi risus. Morbi fermentum nunc porttitor erat cursus, sagittis feugiat justo tempus.
+        Suspendisse et elit sed arcu sodales fringilla. Morbi iaculis diam neque, a suscipit tortor tincidunt eget. Ut ac tincidunt justo, sed vestibulum tellus. 
+        Maecenas eget scelerisque ante. Donec congue sapien ut tortor bibendum volutpat. Donec congue luctus sem id condimentum. Suspendisse purus eros, 
+        molestie in iaculis et, iaculis eget lacus. Sed viverra tempus dolor eu laoreet. Pellentesque faucibus leo eget dolor lobortis posuere.
+      </p>
+  </div>
+</div>
+
+<!-- -->
+
+<footer class="mainfooter" style="bottom:0px;"role="contentinfo">
+    <div >
+        <div class="footer-bottom">
+            <div class="container">  
+                <center>
+                    <p class="text-xs-center"><a target="_blank" href="https://www.facebook.com/eitufmt/"> @Facebook</a> <a target="_blank" href="https://www.instagram.com/eitufmt"> @instagram </a></p>
+                    <p class="text-xs-center" >&copy; Copyright 2018 - UFMT - Todos os direitos reservados.</p>
+                </center>
+            </div>
+        </div>
     </div>
-    </html>
+</footer>
+</div>
+</div>
+</html>

@@ -83,6 +83,7 @@ footer {
 
 }
 
+
 .pesquisapor{
   position: relative;
 }
@@ -92,4 +93,14 @@ footer {
 }
 .opcaodepesquisa2{
   margin-left:60%;
+}
+.slidepersonalizado{
+  margin-top:10%;
+  margin-left:10%;
+  margin-right:60%;
+}
+
+.titulolab{
+  margin-top:5%;
+  font-size:80px;;
 }
