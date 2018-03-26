@@ -86,18 +86,57 @@
     </div>
     </div>
     <div class="col col-md-5 descricao">
+      <h2>Área de atuação: AreaX</h1>
+      <br/>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus diam a odio mollis laoreet. Ut quis facilisis augue. 
       Vestibulum erat nisl, pulvinar id varius quis, scelerisque ut magna. Aliquam non odio iaculis enim fermentum convallis sed non tellus.
        Aliquam eget maximus mauris. Nam a nisi risus. Morbi fermentum nunc porttitor erat cursus, sagittis feugiat justo tempus.
         Suspendisse et elit sed arcu sodales fringilla. Morbi iaculis diam neque, a suscipit tortor tincidunt eget. Ut ac tincidunt justo, sed vestibulum tellus. 
         Maecenas eget scelerisque ante. Donec congue sapien ut tortor bibendum volutpat. Donec congue luctus sem id condimentum. Suspendisse purus eros, 
-        molestie in iaculis et, iaculis eget lacus. Sed viverra tempus dolor eu laoreet. Pellentesque faucibus leo eget dolor lobortis posuere.
+        molestie in iaculis et, iaculis eget lacus. Sed viverra tempus dolor eu laoreet. Pellentesque faucibus leo eget dolor lobortis posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus diam a odio mollis laoreet. Ut quis facilisis augue. 
+      Vestibulum erat nisl, pulvinar id varius quis, scelerisque ut magna. Aliquam non odio iaculis enim fermentum convallis sed non tellus.
+       Aliquam eget maximus mauris. Nam a nisi risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus diam a odio mollis laoreet. Ut quis facilisis augue. 
+      Vestibulum erat nisl, pulvinar id varius quis, scelerisque ut magna. Aliquam non odio iaculis enim fermentum convallis sed non tellus.
+       Aliquam eget maximus mauris. Nam a nisi risus.
       </p>
   </div>
 </div>
-<hr style="top:100px" />
-<!-- -->
+<hr class="linhaabaixo" />
+<!-- Fim do Slide e descrição -->
+<!-- Nome dos responsáveis -->
+
+<h2 class="responsaveis">Responsáveis</h2>
+<div class="row">
+  <div class="col col-md-2"></div>
+  <div class="col col-md-5 ">
+    <table class="table table-hover tabelaresponsaveistd" id="tabelaresponsavel">
+      <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Curriculo</th>
+        <th>Função</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Pessoa1</td>
+        <td><a href="www.google.com.br" TARGET="_blank">google</a></td>
+        <td>Diretor</td>
+      </tr>
+      <tr>
+        <td>Pessoa2</td>
+        <td><a HREF="www.youtube.com.br" TARGET="_blank">youtube</a></td>
+        <td>Coordenador</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col col-md-5"></div>
+</div>
+<hr class ="linhaabaixo"/>
+
+
+<!-- Fim do nome dos responsáveis -->
+
 
 <footer class="mainfooter" style="bottom:0px;"role="contentinfo">
     <div >
