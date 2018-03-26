@@ -95,12 +95,17 @@ footer {
   margin-left:60%;
 }
 .slidepersonalizado{
-  margin-top:10%;
-  margin-left:10%;
-  margin-right:60%;
+  left:30%;
+  width:55%;
 }
 
 .titulolab{
   margin-top:5%;
   font-size:80px;;
+}
+.slidecomtexto{
+  margin-top: 90px;
+}
+.descricao{
+  right: 100px;
 }

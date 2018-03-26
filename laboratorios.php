@@ -61,20 +61,19 @@
 
 
 <!-- Slides -->
-<div class="row">
+<div class="row slidecomtexto">
     <div class="col col-md-7">
     <div id="carouselExampleControls" class="carousel slide slidepersonalizado" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img class="d-block img-fluid" src="img/TestePhP/01.png" height="100%" width="100%" alt="First slide">
+          <img class="d-block img-fluid" src="img/TestePhP/01.png" height="500px" width="350px" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="img/TestePhP/02.png" height="100%" width="100%" alt="Second slide">
+          <img class="d-block img-fluid" src="img/TestePhP/02.png" height="500px" width="350px" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="img/TestePhP/03.png" height="100%" width="100%" alt="Third slide">
+          <img class="d-block img-fluid" src="img/TestePhP/03.png" height="500px" width="350px" alt="Third slide">
         </div>
-      </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -83,9 +82,10 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+      </div>
     </div>
     </div>
-    <div class="col col-md-5">
+    <div class="col col-md-5 descricao">
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus diam a odio mollis laoreet. Ut quis facilisis augue. 
       Vestibulum erat nisl, pulvinar id varius quis, scelerisque ut magna. Aliquam non odio iaculis enim fermentum convallis sed non tellus.
@@ -96,7 +96,7 @@
       </p>
   </div>
 </div>
-
+<hr style="top:100px" />
 <!-- -->
 
 <footer class="mainfooter" style="bottom:0px;"role="contentinfo">
