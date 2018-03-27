@@ -95,6 +95,7 @@ footer {
   margin-left:60%;
 }
 .slidepersonalizado{
+  margin-top:5%;
   left:20%;
   width:55%;
 }
@@ -114,9 +115,8 @@ footer {
   margin-top:20px;
 }
 .responsaveis{
-  margin-bottom: 50px;
-  margin-top: 75px;
-  margin-left:28%;
+  margin-top: 5%;
+  margin-bottom:10%;
 }
 .tabelaresponsaveistd{
   border:none !important;
