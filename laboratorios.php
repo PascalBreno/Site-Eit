@@ -160,6 +160,7 @@
 <div class="row">
   <div class="col col-md-2"></div>
   <div class="col col-md-8">
+  <h2><center>Projetos</center></h2>
     <table class="table table-hover tabelaresponsaveistd" id="tabelaProjetos">
       <thead>
       <tr>
