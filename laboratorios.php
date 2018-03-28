@@ -133,7 +133,7 @@
   </div>
   <div class="col col-md-5">
   <h2 class="responsaveis"> <center>Equipe</center></h2>
-  <table class="table table-hover tabelaresponsaveistd" id="tabelaresponsavel">
+  <table class="table table-hover tabelaresponsaveistd" id="tabelaEquipe">
       <thead>
         <tr>
         <th>Nome</th>
@@ -157,7 +157,31 @@
 </div>
 <hr class ="linhaabaixo"/>
 <!-- Fim do nome dos responsáveis e Equipe -->
-
+<div class="row">
+  <div class="col col-md-2"></div>
+  <div class="col col-md-8">
+    <table class="table table-hover tabelaresponsaveistd" id="tabelaProjetos">
+      <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Link para informações</th>
+        <th>Responsável</th>
+      </tr>
+      </thead>
+      <tr>
+        <td>Extração de Dados</td>
+        <td><a href="www.google.com.br" TARGET="_blank">artigo</a></td>
+        <td>Ariel dos Santos</td>
+      </tr>
+      <tr>
+        <td>WEB</td>
+        <td><a HREF="www.youtube.com.br" TARGET="_blank">youtube</a></td>
+        <td>Pascal Monet</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col col-md-2"></div>
+</div>
 
 <footer class="mainfooter" style="bottom:0px;"role="contentinfo">
     <div >
