@@ -106,10 +106,11 @@
 <!-- Fim do Slide e descrição -->
 <!-- Nome dos responsáveis -->
 
-<h2 class="responsaveis">Responsáveis</h2>
+
 <div class="row">
-  <div class="col col-md-2"></div>
+  <div class="col col-md-1"></div>
   <div class="col col-md-5 ">
+  <h2 class="responsaveis"> <center>Responsáveis</center></h2>
     <table class="table table-hover tabelaresponsaveistd" id="tabelaresponsavel">
       <thead>
         <tr>
@@ -130,12 +131,32 @@
       </tr>
     </table>
   </div>
-  <div class="col col-md-5"></div>
+  <div class="col col-md-5">
+  <h2 class="responsaveis"> <center>Equipe</center></h2>
+  <table class="table table-hover tabelaresponsaveistd" id="tabelaresponsavel">
+      <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Curriculo</th>
+        <th>Função</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Pessoa1</td>
+        <td><a href="www.google.com.br" TARGET="_blank">google</a></td>
+        <td>Diretor</td>
+      </tr>
+      <tr>
+        <td>Pessoa2</td>
+        <td><a HREF="www.youtube.com.br" TARGET="_blank">youtube</a></td>
+        <td>Coordenador</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col col-md-1"></div>
 </div>
 <hr class ="linhaabaixo"/>
-
-
-<!-- Fim do nome dos responsáveis -->
+<!-- Fim do nome dos responsáveis e Equipe -->
 
 
 <footer class="mainfooter" style="bottom:0px;"role="contentinfo">
