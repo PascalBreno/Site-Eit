@@ -183,6 +183,21 @@
   </div>
   <div class="col col-md-2"></div>
 </div>
+<!-- Fim dos Projetos -->
+<hr class ="linhaabaixo"/>
+<!-- Contatos -->
+<div class="row">
+  <div class="col col-md-1"></div>
+  <div class="col col-md-10">
+    <h2><center> Contatos</center> </h2> 
+    <a>Telefone : (99) 9 9999-9999</a>
+    <a>Email: Eit.inovacao@gmail.com</a>
+    <a>Horário de atendimento</a>
+    <a>Local do laboratório</a>
+  </div>
+  <div class="col col-md-1"></div>
+</div>
+<!--Fim da aba Contatos -->
 
 <footer class="mainfooter" style="bottom:0px;"role="contentinfo">
     <div >
